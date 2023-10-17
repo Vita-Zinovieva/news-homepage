@@ -1,10 +1,22 @@
-$(document).ready(function(event){
+/* $(document).ready(function(event){
   $('.header__burger').click(function(event) {
     $('.header__burger,.header__menu').toggleClass('active');
       $('body').toggleClass('lock');
   });
-});
+});  */
  
+var icon = document.querySelector('.header__burger');
+console.log(icon)
+var menu = document.querySelector('.header__menu');
+console.log(menu)
+var body = document.querySelector('body');
+console.log(body)
+
+icon.onclick = function() {
+  icon.classList.toggle("active");
+  menu.classList.toggle("active");
+  body.classList.toggle("lock");
+  };
 
 /* Приклад з https://newsapi.org/docs/endpoints/top-headlines
 let url = 'https://newsapi.org/v2/top-headlines/sources?' +
